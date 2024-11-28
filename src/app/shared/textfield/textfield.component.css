@@ -1,0 +1,28 @@
+.container-textfield {
+    position: relative;
+    display: inline-block;
+}
+
+.container-textfield input {
+    border-radius: 2px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: var(--preto-principal);
+    border: 1px solid #3D3939;
+    height: 36px;
+    width: 280px;
+}
+
+.container-textfield input::placeholder {
+    color: var(--cinza-principal);
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 10px;
+    opacity: 0.8;
+}
+
+.container-textfield input:focus {
+    border-color: var(--hover); 
+    outline: none; 
+    box-shadow: 0 0 5px var(--hover); 
+}

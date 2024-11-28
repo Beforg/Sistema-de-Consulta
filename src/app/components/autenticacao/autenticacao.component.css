@@ -1,0 +1,47 @@
+.container-login {
+    display: flex;
+    justify-content: center;
+    margin-top: 250px;
+}
+
+.login-formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 34px;
+    margin: 15px;
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+.login-acoes {
+    display: flex;
+    flex-direction: row;;
+    gap: 85px;
+    justify-content: space-between;
+  
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.logo {
+    width: 90%;
+}
+
+#novo-usuario {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#novo-usuario:hover {
+    transition: transform 0.2s;
+    color: var(--hover);
+    transform: scale(1.1);
+}
+

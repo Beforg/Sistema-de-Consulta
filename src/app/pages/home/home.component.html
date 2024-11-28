@@ -1,0 +1,35 @@
+<app-header></app-header>
+<section class="container-principal">
+    <app-menu></app-menu>
+    <div class="principal_conteudo">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>RG</th>
+                    <th>Endereço</th>
+                    <th>Nascimento</th>
+                    <th>Placa do Veículo</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cliente of clientes">
+                    <td> {{ cliente.nome}}</td>
+                    <td> {{ cliente.cpf}}</td>
+                    <td> {{ cliente.rg}}</td>
+                    <td> {{ cliente.endereco}}</td>
+                    <td> {{ cliente.dataNascimento}}</td>
+                    <td> {{ cliente.placaCarro}}</td>
+                    <td>
+                        <button  (click)="excluirCliente(cliente)" class="btAcao">
+                            <img [src]="icoExcluir" alt="Botão de Exclusão">
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+

@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "serviceWorker": false,
             "outputPath": "dist/consultas",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -92,5 +93,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "f63bb501-0920-48d8-adf9-fccfbaedc9b0"
   }
 }

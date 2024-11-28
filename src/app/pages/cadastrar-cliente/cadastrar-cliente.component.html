@@ -1,0 +1,54 @@
+<app-header></app-header>
+<section class="conteinar-cc">
+    <app-menu></app-menu>
+    <div>
+        <form [formGroup]="formularioDeCadastro" class="cc-formulario" (ngSubmit)="cadastrarCliente()">
+            <h3>Insira os dados do Usuário</h3>
+            
+            <label for="nome">Nome</label>
+            <app-textfield id="nome" formControlName="nome" prompt="Nome"></app-textfield>
+            <div *ngIf="formularioDeCadastro.get('nome')?.invalid && formularioDeCadastro.get('nome')?.touched">
+                <small *ngIf="formularioDeCadastro.get('nome')?.errors?.['required']">Nome é obrigatório.</small>
+                <small *ngIf="formularioDeCadastro.get('nome')?.errors?.['minlength']">Nome deve ter pelo menos 3 caracteres.</small>
+            </div>
+            
+            <label for="dataNascimento">Data de Nascimento</label>
+            <app-textfield id="dataNascimento" formControlName="dataNascimento" prompt="Data de Nascimento" type="date"></app-textfield>
+            <div *ngIf="formularioDeCadastro.get('dataNascimento')?.invalid && formularioDeCadastro.get('dataNascimento')?.touched">
+                <small *ngIf="formularioDeCadastro.get('dataNascimento')?.errors?.['required']">Data de Nascimento é obrigatória.</small>
+            </div>
+
+            <label for="endereco">Endereço</label>
+            <app-textfield id="endereco" formControlName="endereco" prompt="Endereço"></app-textfield>
+            <div *ngIf="formularioDeCadastro.get('endereco')?.invalid && formularioDeCadastro.get('endereco')?.touched">
+                <small *ngIf="formularioDeCadastro.get('endereco')?.errors?.['required']">Endereço é obrigatório.</small>
+                <small *ngIf="formularioDeCadastro.get('endereco')?.errors?.['minlength']">Endereço deve ter pelo menos 3 caracteres.</small>
+            </div>
+
+            <label for="cpf">CPF</label>
+            <app-textfield id="cpf" formControlName="cpf" prompt="CPF" mask="000.000.000-00"></app-textfield>
+            <div *ngIf="formularioDeCadastro.get('cpf')?.invalid && formularioDeCadastro.get('cpf')?.touched">
+                <small *ngIf="formularioDeCadastro.get('cpf')?.errors?.['required']">CPF é obrigatório.</small>
+                <small *ngIf="formularioDeCadastro.get('cpf')?.errors?.['minlength']">CPF no formato Inválido.</small>
+            </div>
+
+            <label for="rg">RG</label>
+            <app-textfield id="rg" formControlName="rg" prompt="RG" mask="00.000.000-00"></app-textfield>
+            <div *ngIf="formularioDeCadastro.get('rg')?.invalid && formularioDeCadastro.get('rg')?.touched">
+                <small *ngIf="formularioDeCadastro.get('rg')?.errors?.['required']">RG é obrigatório</small>
+                <small *ngIf="formularioDeCadastro.get('rg')?.errors?.['minlength']">RG inválido</small>
+            </div>
+
+            <label for="placaCarro">Placa do Veículo</label>
+            <app-textfield id="placaCarro" formControlName="placaCarro" prompt="Placa"></app-textfield>
+            <div *ngIf="formularioDeCadastro.get('placaCarro')?.invalid && formularioDeCadastro.get('placaCarro')?.touched">
+                <small *ngIf="formularioDeCadastro.get('placaCarro')?.errors?.['required']">Placa é obrigatória.</small>
+                <small *ngIf="formularioDeCadastro.get('placaCarro')?.errors?.['minlength']">Placa inválida</small>
+            </div>
+
+            <nav>
+                <app-button text="Cadastrar" type="submit"></app-button>
+            </nav> 
+        </form> 
+    </div>
+</section>

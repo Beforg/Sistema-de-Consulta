@@ -1,0 +1,15 @@
+<section class="container-login">
+    <div class="login-formulario">
+        <img [src]="logo" alt="Logo do SBC" class="logo">
+        <form [formGroup]="formularioDeLogin" (ngSubmit)="logar()">
+            <div class="login-form">
+                <app-textfield formControlName="username" prompt="Usuário"></app-textfield>
+                <app-textfield formControlName="password" prompt="Senha" type="password"></app-textfield>
+                <nav class="login-acoes">
+                    <a routerLink="/cadastro" id="novo-usuario">Novo Usuário</a>
+                    <app-button text="Entrar" type="submit"></app-button>
+                </nav>
+            </div>
+        </form>
+    </div>
+</section>

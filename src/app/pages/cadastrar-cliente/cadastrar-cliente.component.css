@@ -1,0 +1,36 @@
+
+.menu {
+    flex: 0 0 40%; 
+    background-color: var(--cinza-secundario); 
+}
+
+.conteinar-cc {
+    background-color: var(--cinza-secundario);
+    height: 100vh;
+    display: flex;
+}
+
+div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1%;
+    align-items: center;
+
+}
+
+.cc-formulario {
+    background-color: white;
+    padding: 2% 8%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}

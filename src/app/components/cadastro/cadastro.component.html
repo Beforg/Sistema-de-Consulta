@@ -1,0 +1,36 @@
+<section class="container-cadastro">
+    <form [formGroup]="formularioDeCadastro" (ngSubmit)="cadastrar()">
+      <div class="cadastro-formulario">
+        <img [src]="logo" alt="Logo do SBC" class="logo">
+        <div class="cadastro-form">
+          <label for="name">Nome</label>
+          <app-textfield formControlName="nome" prompt="Nome" id="name"></app-textfield>
+          <div *ngIf="formularioDeCadastro.get('nome')?.invalid && formularioDeCadastro.get('nome')?.touched ">
+            <small *ngIf="formularioDeCadastro.get('nome')?.errors?.['required']">Nome é obrigatório.</small>
+            <small *ngIf="formularioDeCadastro.get('nome')?.errors?.['minlength']">Nome deve ter pelo menos 3 caracteres.</small>
+          </div>
+          <label for="username">Nome do Usuário</label>
+          <app-textfield formControlName="username" prompt="Nome de usuário" id="confirmPassword"></app-textfield>
+          <div *ngIf="formularioDeCadastro.get('username')?.invalid && formularioDeCadastro.get('username')?.touched ">
+            <small *ngIf="formularioDeCadastro.get('username')?.errors?.['required']">Nome de usuário é obrigatório.</small>
+            <small *ngIf="formularioDeCadastro.get('username')?.errors?.['minlength']">Usuário deve ter pelo menos 6 caracteres.</small>
+          </div>
+          <label for="password">Senha</label>
+          <app-textfield formControlName="password" prompt="Senha" type="password" id="password"></app-textfield>
+          <div *ngIf="formularioDeCadastro.get('password')?.invalid && formularioDeCadastro.get('password')?.touched ">
+            <small *ngIf="formularioDeCadastro.get('password')?.errors?.['required']">Senha é obrigatória.</small>
+            <small *ngIf="formularioDeCadastro.get('password')?.errors?.['minlength']">Senha deve ter pelo menos 6 caracteres</small>
+          </div>
+          <label for="confirmPassword">Confirme a senha</label>
+          <app-textfield formControlName="confirmPassword" prompt="Confirme a Senha" type="password" id="confirmPassword"></app-textfield>
+          <div *ngIf="formularioDeCadastro.errors?.['passwordMismatch'] && formularioDeCadastro.get('confirmPassword')?.touched">
+            <small>As senhas não correspondem.</small>
+          </div>
+        </div>
+        <div class="cadastro-acoes">
+          <a routerLink="/autenticacao" id="voltar">Voltar</a>
+          <app-button text="Cadastrar" type="submit"></app-button>
+        </div>
+      </div>
+    </form>
+  </section>

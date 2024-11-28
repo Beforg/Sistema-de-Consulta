@@ -1,0 +1,36 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #FFF;
+    height: 90px;
+    margin: 0;
+    padding: 0;
+}
+
+.header-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 15px;
+    gap: 10px;
+}
+
+.image-logo {
+    width: 45px;
+    height: 45px;
+}
+
+.header-logout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--preto-principal);
+    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+}

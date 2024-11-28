@@ -1,0 +1,16 @@
+.botao {
+    border-radius: 5px;
+    border: 1px solid;
+    padding: 8px 18px;
+    background-color: var(--cinza-secundario);
+    font-size: 18px;
+    color: var(--preto-principal);
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+.botao:hover {
+    transition: color 0.5s;
+    color: var(--hover);
+}

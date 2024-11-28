@@ -1,0 +1,58 @@
+<app-header></app-header>
+<section class="container-principal">
+    <app-menu></app-menu>
+    <div class="principal-conteudo">
+        <div class="nav-pesquisa">
+            <form class="form" [formGroup]="formularioDePesquisa" (ngSubmit)="buscarClientePorFiltro()">
+                <h3>Preencha os dados para realizar a busca</h3>
+                <app-textfield prompt="Insira para a busca" formControlName="valor" [mask]="mascara"></app-textfield>
+              <div class="cbPesquisa">
+                <nav>
+                    <label for="radio1">Buscar por CPF  </label>
+                    <input type="radio" id="radio1" formControlName="filtro" value="cpf" class="rb" (change)="atualizaMascara()">
+                </nav>  
+                <nav>
+                    <label for="radio2">Buscar por RG   </label>
+                    <input type="radio" id="radio2" formControlName="filtro" value="rg" class="rb" (change)="atualizaMascara()">
+                </nav>
+                <nav>
+                    <label for="radio3">Buscar por Placa</label>
+                    <input type="radio" id="radio3" formControlName="filtro" value="placa" class="rb" (change)="atualizaMascara()">
+                </nav>
+              </div>
+              <nav class="nav-bt">
+                <app-button text="Pesquisar"></app-button>
+              </nav>
+            </form>
+          </div>
+        <div class="div-resposta" *ngIf="found == true">
+            <h3>Resultados da Busca</h3>
+            <hr>
+            <nav>
+                <label>Nome: </label>
+                <span>{{resultadoCliente?.nome}}</span>
+            </nav>
+            <nav>
+                <label>CPF: </label>
+                <span>{{resultadoCliente?.cpf}}</span>
+            </nav>
+            <nav>
+                <label>RG: </label>
+                <span>{{resultadoCliente?.rg}}</span>
+            </nav>
+            <nav>
+                <label>Endereço: </label>
+                <span>{{resultadoCliente?.endereco}}</span>
+            </nav>
+            <nav>
+                <label>Data de Nascimento: </label>
+                <span>{{resultadoCliente?.dataNascimento}}</span>
+            </nav>
+            <nav>
+                <label>Placa do Veículo: </label>
+                <span>{{resultadoCliente?.placaCarro}}</span>
+            </nav>
+            <hr>
+        </div>
+    </div>
+</section>
