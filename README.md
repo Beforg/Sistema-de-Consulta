@@ -2,7 +2,7 @@
 ![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white) ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) ![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white) ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
 ## Sobre
-Sistema de consulta de dados pessoais como se fosse para polícia civil (nome completo, CPF, RG, endereço, telefone, placa do carro e etc) com foco na aplicação das práticas Scrum para a Disciplina de Introdução a Engenharia de Computação. no Back-End a API Rest foi feita na linguagem Java usando o Framework Spring, o desenvolvimento do front-end foi feito com o framework Angular.
+Sistema de consulta de dados pessoais como se fosse para polícia civil (nome completo, CPF, RG, endereço, telefone, placa do carro e etc) com foco na aplicação das práticas Scrum para a Disciplina de Introdução a Engenharia de Computação. no Back-End a API Rest foi feita na linguagem Java usando o Framework Spring, o desenvolvimento do front-end foi feito com o framework Angular. Para contextualizar a aplicação do trabalho de IEC
 
 ## Como testar
 
